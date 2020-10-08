@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="customer")
 public class Customer {
-
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
@@ -28,7 +28,7 @@ public class Customer {
 	public Customer() {
 		
 	}
-	
+
 	public int getId() {
 		return id;
 	}
