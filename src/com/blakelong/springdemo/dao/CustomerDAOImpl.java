@@ -41,7 +41,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		// save OR update the customer
 		session.saveOrUpdate(customer);
-		
 	}
 	
 	@Override
@@ -55,6 +54,19 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		// return customer
 		return customer;
+	}
+	
+	@Override
+	public void deleteCustomer(int id) {
+		
+		// get hibernate session
+		Session session = sessionFactory.getCurrentSession();
+		
+		// get customer by primary key
+		Customer customer = session.get(Customer.class, id);
+		
+		// delete customer
+		session.delete(customer);
 	}
 
 }
