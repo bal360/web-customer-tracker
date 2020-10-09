@@ -19,6 +19,10 @@
 		
 		
 			<form:form action="saveCustomer" modelAttribute="customer" method="POST">
+				
+				<!-- need to associate data with customer id -->
+				<form:hidden path="id"/>
+				
 				<table>
 					<tbody>
 						
