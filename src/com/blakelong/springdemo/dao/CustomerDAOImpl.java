@@ -75,7 +75,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		// get hibernate session
 		Session session = sessionFactory.getCurrentSession();
 		
-		Query theQuery = null;
+		Query<Customer> theQuery = null;
 		
 		if (theSearchName != null && theSearchName.trim().length() > 0) {
 			// search for firstName or lastName - case insensitive
